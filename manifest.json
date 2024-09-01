@@ -1,0 +1,25 @@
+{
+    "manifest_version": 2,
+    "name": "Canvas Downloads Enhancer",
+    "version": "1.0",
+    "description": "Adds download links to attachments on Canvas modules pages.",
+    "permissions": [
+      "activeTab",
+      "scripting"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["*://*/courses/*/modules", "*://*/courses/*"],
+        "js": ["content.js"]
+      }
+    ],
+    "icons": {
+      "48": "icon.png"
+    },
+    "browser_specific_settings": {
+      "gecko": {
+        "id": "canvas-file-downloader@phantomoffkanagawa.github"
+      }
+    }
+  }
+  
